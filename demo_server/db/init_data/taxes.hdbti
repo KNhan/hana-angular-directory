@@ -1,0 +1,8 @@
+import = [
+            {
+                table = "p1940088139trial.i058153.demo_server.db.init_data::taxes";
+                schema = "DEV_EZ3RT47T41KUSXIDXQY2D8GOH";
+                file = "p1940088139trial.i058153.demo_server.db.init_data:taxes.csv"; 
+                header = true;
+            }          
+         ];

@@ -1,0 +1,13 @@
+table.schemaName = "DEV_EZ3RT47T41KUSXIDXQY2D8GOH";
+table.tableType = COLUMNSTORE;
+table.columns = [
+	{name = "PPSno"; sqlType = VARCHAR; nullable = false; length = 200;},
+	{name = "Year"; sqlType = VARCHAR; nullable = false; length = 4;},
+	{name = "Currency"; sqlType = VARCHAR; nullable = false; length = 4;},
+	{name = "PAYE"; sqlType = DECIMAL; nullable = true; precision = 17; scale = 3;},
+	{name = "USC"; sqlType = DECIMAL; nullable = true; precision = 17; scale = 3;},
+	{name = "PRSI"; sqlType = DECIMAL; nullable = true; precision = 17; scale = 3;},
+	{name = "EmployerName"; sqlType = VARCHAR; nullable = false; length = 200;},
+	{name = "EmployerNo"; sqlType = VARCHAR; nullable = false; length = 200;}
+	];
+table.primaryKey.pkcolumns = ["PPSno","Year"];

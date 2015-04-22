@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cube:cube xmlns:Cube="http://www.sap.com/ndb/BiModelCube.ecore" schemaVersion="1.5" id="V_TAXES" applyPrivilegeType="NONE" checkAnalyticPrivileges="false" defaultClient="$$client$$" defaultLanguage="$$language$$" visibility="reportingEnabled">
+  <origin/>
+  <descriptions defaultDescription="V_TAXES"/>
+  <metadata changedAt="2015-04-20 23:26:30.431"/>
+  <localVariables/>
+  <privateMeasureGroup id="MeasureGroup">
+    <attributes>
+      <attribute id="PPSno" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPSno"/>
+        <keyMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="PPSno"/>
+      </attribute>
+      <attribute id="Year" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Year"/>
+        <keyMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="Year"/>
+      </attribute>
+      <attribute id="Currency" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency"/>
+        <keyMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="Currency"/>
+      </attribute>
+      <attribute id="EmployerName" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EmployerName"/>
+        <keyMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="EmployerName"/>
+      </attribute>
+      <attribute id="EmployerNo" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EmployerNo"/>
+        <keyMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="EmployerNo"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies>
+        <tableProxy centralTable="true">
+          <table schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes"/>
+        </tableProxy>
+      </tableProxies>
+      <joins/>
+      <layout>
+        <shapes>
+          <shape modelObjectName="p1940088139trial.i058153.demo_server.db::taxes" modelObjectNameSpace="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" modelObjectType="catalog">
+            <upperLeftCorner x="70" y="30"/>
+          </shape>
+        </shapes>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="PAYE" order="1" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PAYE"/>
+        <measureMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="PAYE"/>
+      </measure>
+      <measure id="USC" order="2" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="USC"/>
+        <measureMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="USC"/>
+      </measure>
+      <measure id="PRSI" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PRSI"/>
+        <measureMapping schemaName="DEV_EZ3RT47T41KUSXIDXQY2D8GOH" columnObjectName="p1940088139trial.i058153.demo_server.db::taxes" columnName="PRSI"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <sharedDimensions/>
+    <layout>
+      <shapes>
+        <shape modelObjectName="MEASURE_GROUP" modelObjectType="repository">
+          <upperLeftCorner x="300" y="200"/>
+        </shape>
+        <shape modelObjectName="LogicalView" modelObjectNameSpace="MeasureGroup" modelObjectType="repository">
+          <upperLeftCorner x="40" y="85"/>
+          <rectangleSize height="0" width="0"/>
+        </shape>
+      </shapes>
+    </layout>
+  </privateMeasureGroup>
+</Cube:cube>

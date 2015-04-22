@@ -1,0 +1,26 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="" ng-click="back()">
+            <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">Tax Payer</h1>
+    </div>
+</div>
+
+<div class='details'>
+    <img ng-src="pics/{{people.pic}}" class="people-image">
+    <h1>Name: {{people.title}} {{people.firstName}} {{people.lastName}}</h1>
+    <h2>Address: {{people.city}}</h2>
+    <h2>PPS No: {{people.PPSno}}</h2>
+    <div class="topcoat-list__container scroller">
+        <ul class="topcoat-list list actions">
+            <li class="topcoat-list__item" ng-show="people.managerId"><a ng-click="go('peoples/' + people.PPSno)"><p>View Manager</p><p>{{people.managerName}}</p><div class="action-icon icon-manager"/></a></li>
+            <li class="topcoat-list__item" ng-show="people.PPSno"><a ng-click="go('peoples/' + people.PPSno + '/taxyearreports')"><p>View Tax Years</p><div class="action-icon icon-reports"/></a></li>
+            <li class="topcoat-list__item" ng-show="people.cellPhone"><a href="tel:{{people.cellPhone}}"><p>Call Cell</p><p>{{people.cellPhone}}</p><div class="action-icon icon-call"/></a></li>
+            <li class="topcoat-list__item" ng-show="people.email"><a href="mailto:{{people.email}}"><p>Email</p><p>{{people.email}}</p><div class="action-icon icon-mail"/></a></li>
+        </ul>
+    </div>
+</div>
+                

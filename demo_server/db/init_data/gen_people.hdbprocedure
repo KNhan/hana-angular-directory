@@ -1,0 +1,47 @@
+PROCEDURE "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db.init_data::gen_people" (
+ IN iv_num integer
+ )
+ LANGUAGE SQLSCRIPT
+ SQL SECURITY INVOKER AS
+begin
+
+declare lv_cnt integer := iv_num;
+
+-- SELECT "PPSno",	"firstName",	"lastName",	"title",	"cellPhone",	"email",	"city",	"pic" FROM  "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people" union all
+TAB1 = 
+
+select 1 as "PPSno", 'James' as "firstName", 'King' as "lastName", 'Mr' as "title", '617-000-0001' as "cellPhone", 'jking@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'james_king.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 2 as "PPSno", 'Julie' as "firstName", 'Taylor' as "lastName", 'Ms' as "title", '617-000-0002' as "cellPhone", 'jtaylor@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'julie_taylor.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 3 as "PPSno", 'Eugene' as "firstName", 'Lee' as "lastName", 'Mr' as "title", '617-000-0003' as "cellPhone", 'elee@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'eugene_lee.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 4 as "PPSno", 'John' as "firstName", 'Williams' as "lastName", 'Mr' as "title", '617-000-0004' as "cellPhone", 'jwilliams@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'john_williams.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 5 as "PPSno", 'Ray' as "firstName", 'Moore' as "lastName", 'Mr' as "title", '617-000-0005' as "cellPhone", 'rmoore@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'ray_moore.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 6 as "PPSno", 'Paul' as "firstName", 'Jones' as "lastName", 'Mr' as "title", '617-000-0006' as "cellPhone", 'pjones@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'paul_jones.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 7 as "PPSno", 'Paula' as "firstName", 'Gates' as "lastName", 'Ms' as "title", '617-000-0007' as "cellPhone", 'pgates@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'paula_gates.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 8 as "PPSno", 'Lisa' as "firstName", 'Wong' as "lastName", 'Ms' as "title", '617-000-0008' as "cellPhone", 'lwong@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'lisa_wong.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 9 as "PPSno", 'Gary' as "firstName", 'Donovan' as "lastName", 'Mr' as "title", '617-000-0009' as "cellPhone", 'gdonovan@fakemail.com' as "email", 'Limerick, Ireland' as "city", 'gary_donovan.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 10 as "PPSno", 'Kathleen' as "firstName", 'Byrne' as "lastName", 'Ms' as "title", '617-000-0010' as "cellPhone", 'kbyrne@fakemail.com' as "email", 'Limerick, Ireland' as "city", 'kathleen_byrne.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 11 as "PPSno", 'Amy' as "firstName", 'Jones' as "lastName", 'Ms' as "title", '617-000-0011' as "cellPhone", 'ajones@fakemail.com' as "email", 'Limerick, Ireland' as "city", 'amy_jones.jpg' as "pic"  FROM DUMMY UNION ALL  
+select 12 as "PPSno", 'Steven' as "firstName", 'Wells' as "lastName", 'Mr' as "title", '617-000-0012' as "cellPhone", 'swells@fakemail.com' as "email", 'Limerick, Ireland' as "city", 'steven_wells.jpg' as "pic"  FROM DUMMY;
+
+
+
+
+
+while (lv_cnt >0) do
+
+insert into "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people"
+SELECT top :lv_cnt
+    "p1940088139trial.i058153.demo_server.db::peopleseq".nextval as "PPSno",
+	"firstName",
+	"lastName",
+	"title",
+	"cellPhone",
+	'' AS "officePhone",
+	"email",
+	"city",
+	"pic"
+FROM :tab1;
+lv_cnt := lv_cnt - 12;
+end while;
+
+end;

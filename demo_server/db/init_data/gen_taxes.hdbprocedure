@@ -1,0 +1,35 @@
+PROCEDURE "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db.init_data::gen_taxes" (
+ IN iv_num integer
+ )
+ LANGUAGE SQLSCRIPT
+ SQL SECURITY INVOKER AS
+begin
+
+declare lv_cnt integer := iv_num;
+
+
+TAB1 = 
+select 2011 as"Year", 'EUR' as "Currency", 0.00 as 	"PAYE", 0.00 as "USC", 0.00 as 	"PRSI", 'SAP SE' as "EmployerName", 'SAP0101' as "EmployerNo" from dummy union all
+select 2012 as"Year", 'EUR' as "Currency", 0.00 as 	"PAYE", 0.00 as "USC", 0.00 as 	"PRSI", 'SAP SE' as "EmployerName", 'SAP0101' as "EmployerNo" from dummy union all
+select 2013 as"Year", 'EUR' as "Currency", 0.00 as 	"PAYE", 0.00 as "USC", 0.00 as 	"PRSI", 'SAP SE' as "EmployerName", 'SAP0101' as "EmployerNo" from dummy union all
+select 2014 as"Year", 'EUR' as "Currency", 0.00 as 	"PAYE", 0.00 as "USC", 0.00 as 	"PRSI", 'SAP SE' as "EmployerName", 'SAP0101' as "EmployerNo" from dummy;
+
+
+
+
+insert into "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::taxes"
+SELECT 
+  p."PPSno",
+	"Year",
+	"Currency",
+	"PAYE",
+	"USC",
+	"PRSI",
+	"EmployerName",
+	"EmployerNo"
+FROM 
+"DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people" as p
+cross join
+:TAB1 as t;
+
+end;

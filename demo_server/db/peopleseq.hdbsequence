@@ -1,0 +1,5 @@
+schema= "DEV_EZ3RT47T41KUSXIDXQY2D8GOH";
+minvalue= 1;
+nominvalue=true;
+cycles= false;
+depends_on_table="p1940088139trial.i058153.demo_server.db::people";

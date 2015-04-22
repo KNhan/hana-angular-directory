@@ -1,0 +1,13 @@
+table.schemaName = "DEV_EZ3RT47T41KUSXIDXQY2D8GOH";
+table.tableType = COLUMNSTORE;
+table.columns = [
+	{name = "PPSno"; sqlType = VARCHAR; nullable = false; length = 200;},
+	{name = "firstName"; sqlType = NVARCHAR; nullable = false;length = 200;},
+	{name = "lastName"; sqlType = NVARCHAR; nullable = false; length = 200;},
+	{name = "title"; sqlType = NVARCHAR;length = 200;},
+	{name = "cellPhone"; sqlType = NVARCHAR;length = 200;},
+	{name = "officePhone"; sqlType = NVARCHAR;length = 200;},
+	{name = "email"; sqlType = NVARCHAR;length = 200;},
+	{name = "city"; sqlType = NVARCHAR;length = 200;},
+	{name = "pic"; sqlType = NVARCHAR;length = 200;}];
+table.primaryKey.pkcolumns = ["PPSno"];

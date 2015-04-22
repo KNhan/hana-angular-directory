@@ -1,0 +1,23 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="" ng-click="back()">
+            <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">Tax Years based on Final Returns</h1>
+    </div>
+</div>
+
+<div class="topcoat-list__container scroller" style="top:69px;">
+    <ul class="topcoat-list list">
+        <li ng-repeat="people in peoples | filter:query | orderBy:orderProp" class="topcoat-list__item">
+            <a ng-click="go('/peoples/' + people.PPSno)">
+                <img ng-src="pics/{{people.pic}}">
+                <p>{{people.firstName}} {{people.lastName}}</p>
+                <p>{{people.title}}</p>
+                <span class="chevron"></span><span class="count">{{people.reports}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

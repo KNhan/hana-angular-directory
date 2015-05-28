@@ -36,19 +36,11 @@ Update the sample code with your schema name and package from HANA trial
 4. Import client code and update client/js/rest-services.js as appropriate
 	\client\*
 
-5. Grant access
+5. Grant access (be sure to run \server\rest\people.xsjs first or you may get error that the user P1940088139 do not exist )
         grant select on schema "DEV_EZ3RT47T41KUSXIDXQY2D8GOH" to P1940088139;
 
 
-OR Using roles
-	check your username @ https://accounts.sap.com/ui/protected/profilemanagement
-
-	GRANT EXECUTE,select ON schema "DEV_39COZS7SO5QZ6WEHD0TVQM8D7" TO _SYS_REPO with grant option
-	create roles\model.hdbrole
-
-	call "HCP"."HCP_GRANT_ROLE_TO_USER"('i058153trial.demo.server.roles::model_access','I058153');
-	
-	Try and launch your App.
+6. Try and launch your App.
 	\client\index.html
-	\client\iphone.html
+	\client\iphone.html 
  

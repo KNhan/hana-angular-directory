@@ -1,4 +1,4 @@
-function createPeopleEntry(rs, attribute, obj) {
+function createPeopleEntry(rs) {
         return { 
             "PPSno": rs.getNString(1),
             "Year": rs.getNString(2), 	
@@ -15,14 +15,13 @@ function getPeopleList() {
   
     var body = '';
     var conn = $.db.getConnection();
-    var pstmt;
-    var rs;
+    var pstmt;    var rs;
     var query;
     var list = [];
 
     try {
         // Get People List
-        query = 'SELECT	"PPSno","Year",	"Currency",	"PAYE",	"USC",	"PRSI",	"EmployerName",	"EmployerNo" FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::taxes"';
+        query = 'SELECT	"PPSno","Year",	"Currency",	"PAYE",	"USC",	"PRSI",	"EmployerName",	"EmployerNo" FROM "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people"';
         pstmt = conn.prepareStatement(query);
 
         rs = pstmt.executeQuery();
@@ -58,7 +57,7 @@ function getPersontaxes(peopleId) {
     try {
     // Get 1 Person
         query = 'SELECT	"PPSno","Year",	"Currency",	"PAYE",	"USC",	"PRSI",	' + 
-        ' "EmployerName",	"EmployerNo" FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::taxes" where "PPSno" = ?';
+        ' "EmployerName",	"EmployerNo" FROM "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::taxes" where "PPSno" = ?';
         pstmt = conn.prepareStatement(query);
        pstmt.setString(1, peopleId);
        rs = pstmt.executeQuery();

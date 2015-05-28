@@ -1,4 +1,4 @@
-function createPeopleEntry(rs, attribute, obj) {
+function createPeopleEntry(rs) {
         return { 
             "PPSno": rs.getNString(1),
             "firstName": rs.getNString(2), 	
@@ -48,7 +48,7 @@ function getPeopleList() {
 
 //Get People
 function getPerson(peopleId) {
-  function createPeopleEntry(rs, attribute, obj) {
+  function createPeopleEntry(rs) {
         return { 
             "PPSno": rs.getNString(1),
             "firstName": rs.getNString(2), 	
@@ -71,7 +71,7 @@ function getPerson(peopleId) {
     try {
     // Get 1 Person
         query = 'SELECT top 1 "PPSno","firstName", 	"lastName", 	"title", 	"cellPhone", 	"officePhone", 	"email", 	"city", ' + 
-        '	"pic" FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people" where "PPSno" = ?';
+        '	"pic" FROM "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people" where "PPSno" = ?';
         pstmt = conn.prepareStatement(query);
        pstmt.setString(1, peopleId);
        rs = pstmt.executeQuery();
@@ -93,7 +93,7 @@ function getPerson(peopleId) {
     $.response.contentType = 'application/json';
     $.response.setBody(body);
     $.response.status = $.net.http.OK;
-}
+} 
 
 
 var peopleId = $.request.parameters.get('peopleId');

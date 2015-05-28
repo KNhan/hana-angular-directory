@@ -1,0 +1,8 @@
+import = [
+            {
+                table = "i058153trial.demo.server.db.init_data::people";
+                schema = "DEV_39COZS7SO5QZ6WEHD0TVQM8D7";
+                file = "i058153trial.demo.server.db.init_data:people.csv"; 
+                header = true;
+            }          
+         ];

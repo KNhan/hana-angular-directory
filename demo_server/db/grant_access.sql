@@ -1,1 +1,0 @@
-grant select on schema "DEV_EZ3RT47T41KUSXIDXQY2D8GOH" to P1940088139;

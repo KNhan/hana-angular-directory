@@ -1,4 +1,4 @@
-PROCEDURE "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db.init_data::gen_people" (
+PROCEDURE "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db.init_data::gen_people" (
  IN iv_num integer
  )
  LANGUAGE SQLSCRIPT
@@ -7,7 +7,7 @@ begin
 
 declare lv_cnt integer := iv_num;
 
--- SELECT "PPSno",	"firstName",	"lastName",	"title",	"cellPhone",	"email",	"city",	"pic" FROM  "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people" union all
+-- SELECT "PPSno",	"firstName",	"lastName",	"title",	"cellPhone",	"email",	"city",	"pic" FROM  "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people" union all
 TAB1 = 
 
 select 1 as "PPSno", 'James' as "firstName", 'King' as "lastName", 'Mr' as "title", '617-000-0001' as "cellPhone", 'jking@fakemail.com' as "email", 'Dublin, Ireland' as "city", 'james_king.jpg' as "pic"  FROM DUMMY UNION ALL  
@@ -29,9 +29,9 @@ select 12 as "PPSno", 'Steven' as "firstName", 'Wells' as "lastName", 'Mr' as "t
 
 while (lv_cnt >0) do
 
-insert into "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people"
+insert into "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people"
 SELECT top :lv_cnt
-    "p1940088139trial.i058153.demo_server.db::peopleseq".nextval as "PPSno",
+    "i058153trial.demo.server.db::peopleseq".nextval as "PPSno",
 	"firstName",
 	"lastName",
 	"title",

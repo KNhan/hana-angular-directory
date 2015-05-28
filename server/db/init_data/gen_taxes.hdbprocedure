@@ -1,4 +1,4 @@
-PROCEDURE "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db.init_data::gen_taxes" (
+PROCEDURE "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db.init_data::gen_taxes" (
  IN iv_num integer
  )
  LANGUAGE SQLSCRIPT
@@ -17,7 +17,7 @@ select 2014 as"Year", 'EUR' as "Currency", 0.00 as 	"PAYE", 0.00 as "USC", 0.00 
 
 
 
-insert into "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::taxes"
+insert into "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::taxes"
 SELECT 
   p."PPSno",
 	"Year",
@@ -28,7 +28,7 @@ SELECT
 	"EmployerName",
 	"EmployerNo"
 FROM 
-"DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people" as p
+"DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people" as p
 cross join
 :TAB1 as t;
 

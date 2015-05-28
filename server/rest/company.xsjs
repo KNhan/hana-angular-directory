@@ -3,7 +3,7 @@
 
 //Get People
 function getcompanytaxes(company) {
-function createCompanyEntry(rs, attribute, obj) {
+function createCompanyEntry(rs) {
         return { 
             "EmployerName": rs.getNString(1),
             "EmployerNo": rs.getNString(2), 	

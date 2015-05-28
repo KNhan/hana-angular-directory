@@ -1,4 +1,4 @@
-table.schemaName = "DEV_EZ3RT47T41KUSXIDXQY2D8GOH";
+table.schemaName = "DEV_39COZS7SO5QZ6WEHD0TVQM8D7";
 table.tableType = COLUMNSTORE;
 table.columns = [
 	{name = "PPSno"; sqlType = VARCHAR; nullable = false; length = 200;},

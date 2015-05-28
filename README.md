@@ -37,6 +37,10 @@ Update the sample code with your schema name and package from HANA trial
 	\client\*
 
 5. Grant access
+        grant select on schema "DEV_EZ3RT47T41KUSXIDXQY2D8GOH" to P1940088139;
+
+
+OR Using roles
 	check your username @ https://accounts.sap.com/ui/protected/profilemanagement
 
 	GRANT EXECUTE,select ON schema "DEV_39COZS7SO5QZ6WEHD0TVQM8D7" TO _SYS_REPO with grant option

@@ -19,8 +19,10 @@ Update the sample code with your schema name and package from HANA trial
 	3.
 	\server\db\init_data\gen_people.hdbprocedure
 	\server\db\init_data\gen_taxes.hdbprocedure
+
 	4.
 	truncate table "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people";
+
 	CALL "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db.init_data::gen_people"(100);
 	
 	truncate table "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::taxes";

@@ -45,3 +45,4 @@ Update the sample code with your schema name and package from HANA trial
 	Try and launch your App.
 	\client\index.html
 	\client\iphone.html
+ 

@@ -36,6 +36,9 @@ call "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db.init_data::gen
 
 Grant access
 check your username @ https://accounts.sap.com/ui/protected/profilemanagement
-grant select on schema "DEV_39COZS7SO5QZ6WEHD0TVQM8D7" to {userid};
 
+GRANT EXECUTE,select ON schema "DEV_39COZS7SO5QZ6WEHD0TVQM8D7" TO _SYS_REPO with grant option
+create roles\model.hdbrole
+
+call "HCP"."HCP_GRANT_ROLE_TO_USER"('i058153trial.demo.server.roles::model_access','I058153');
 Try and launch your App.

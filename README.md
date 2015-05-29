@@ -35,7 +35,8 @@ Update the sample code with your schema name and package from HANA trial
 
 4. Import client code and update client/js/rest-services.js as appropriate
 	\client\*
-
+        \client\iphone.html needs to be updated to 
+       <iframe src="https://<yourinstance>.hanatrial.ondemand.com/<your package>/demo/client/index.html" width="320" height="550">
 5. Grant access (be sure to run \server\rest\people.xsjs first or you may get error that the user P1940088139 do not exist )
         grant select on schema "DEV_EZ3RT47T41KUSXIDXQY2D8GOH" to P1940088139;
 
@@ -44,3 +45,6 @@ Update the sample code with your schema name and package from HANA trial
 	\client\index.html
 	\client\iphone.html 
  
+
+
+*****The code in the repository is not considered secure and should be used to demo and training only.***

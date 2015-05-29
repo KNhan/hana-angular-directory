@@ -25,7 +25,7 @@ function createCompanyEntry(rs) {
     try {
     // Get 1 Person
         query = 'SELECT  	"EmployerName",	"EmployerNo",	"Year",	"Currency",	sum("PAYE") as "PAYE" ,	sum("USC") as USC,	sum("PRSI") as PSRSI' + 
-' FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::taxes" ' +
+' FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo.server.db::taxes" ' +
 ' where 	"EmployerNo" = ?' +
 ' group by "EmployerName",	"EmployerNo",	"Year",	"Currency" ';
         pstmt = conn.prepareStatement(query);

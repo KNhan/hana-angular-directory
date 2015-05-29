@@ -23,7 +23,10 @@ function getPeopleList() {
 
     try {
         // Get People List
-        query = 'SELECT top 50 "PPSno","firstName", 	"lastName", 	"title", 	"cellPhone", 	"officePhone", 	"email", 	"city", 	"pic" FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo_server.db::people" where "firstName" != \'Eugene\' order by "PPSno"';
+        query = 'SELECT top 50 "PPSno","firstName", 	"lastName", 	"title", 	"cellPhone", 	"officePhone", 	"email", ' + 
+              '	"city", 	"pic" FROM "DEV_EZ3RT47T41KUSXIDXQY2D8GOH"."p1940088139trial.i058153.demo.server.db::people" ' + 
+               ' where "firstName" != \'Eugene\' order by "PPSno"';
+               
         pstmt = conn.prepareStatement(query);
 
         rs = pstmt.executeQuery();

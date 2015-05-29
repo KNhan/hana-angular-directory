@@ -21,7 +21,8 @@ function getPeopleList() {
 
     try {
         // Get People List
-        query = 'SELECT	"PPSno","Year",	"Currency",	"PAYE",	"USC",	"PRSI",	"EmployerName",	"EmployerNo" FROM "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people"';
+        query = 'SELECT	"PPSno","Year",	"Currency",	"PAYE",	"USC",	"PRSI",	"EmployerName",	"EmployerNo" ' + 
+        ' FROM "DEV_39COZS7SO5QZ6WEHD0TVQM8D7"."i058153trial.demo.server.db::people"';
         pstmt = conn.prepareStatement(query);
 
         rs = pstmt.executeQuery();
